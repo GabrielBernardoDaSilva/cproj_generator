@@ -12,6 +12,8 @@ set(CMAKE_C_STANDARD 17)
 ## set c flags
 set(CMAKE_C_FLAGS "-Wall -Wextra -Werror -Wpedantic -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-but-set-parameter -Wno-unused-value -Wno-unused-result -Wno-unused-label -Wno-unused-local-typedefs -Wno-unused-macros -Wno-unused-const-variable -Wno-unused-const-variable -Wno-unused-const-parameter -Wno-unused-const-variable -Wno-unused-cons ")
 
+## release build
+set(CMAKE_C_FLAGS_RELEASE "-O3 -DNDEBUG")
 
                     
 file (GLOB SOURCES "src/*.c")

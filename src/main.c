@@ -109,7 +109,6 @@ int main(int argc, char const *argv[])
         return 1;
     }
     fwrite(main_c_content, 1, strlen(main_c_content), main_file);
-    printf("\033[1;32mProject created\033[0m %li\n", strlen(main_c_content));
     fclose(main_file);
 
     // create CMakeLists.txt file
@@ -148,6 +147,18 @@ int main(int argc, char const *argv[])
 
     fwrite(cmake_content_proj, 1, strlen(cmake_content_proj), cmake_file);
     fclose(cmake_file);
+
+
+    // finish create project
+    printf("\033[1;32mProject %s created\033[0m\n", project);
+
+    //clean up
+    free(project);
+    free(src);
+    free(include);
+    free(main);
+    free(cmake);
+    free(new_cmake_content);
 
     return 0;
 }
