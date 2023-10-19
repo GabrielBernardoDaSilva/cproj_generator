@@ -10,3 +10,5 @@ It creates:
   <br>
   <br>
 ** It Only works with Linux **
+<br>
+To install clone repository, create build dir, cmake .., make and alternatively install in linux sudo make install
